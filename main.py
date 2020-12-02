@@ -268,7 +268,6 @@ while True:
       # quit game
       elif command.lower() in ('n', 'no'):
           clear()
-          print('Thanks for Playing!')
           break
       # bad command
       else:
@@ -305,6 +304,7 @@ while True:
           current_room = 'title room'
           continue
         elif again == 'b':
+            clear()
             print('Thanks for playing!')
             print("\nFinal for CSCI-1101-95L-Fall2020")
             print("\nby:")
