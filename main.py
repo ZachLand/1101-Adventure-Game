@@ -29,21 +29,21 @@ while True:
   while True:
       if current_room == 'title room':
           clear()
-          print("Welcome to Dog Train")
-          name = print('\nPlease enter your name: ')
+          print_slow("Welcome to Dog Train")
+          print_slow('\nPlease enter your name: ')
           name = input()
           clear()
 
           win = False
-          print('\n'+name+ ', you are in a train with your dog.')
-          print('Suddenly, everything goes dark as the train passes through a tunnel.')
-          print('Once the train exits the tunnel, you are able to see again.')
-          print('You see that your beloved dog is no longer next to you.')
-          print('\nAs you start looking around, you hear a voice through the intercom.')
-          print(
+          print_slow('\n'+name+ ', you are in a train with your dog.')
+          print_slow('Suddenly, everything goes dark as the train passes through a tunnel.')
+          print_slow('Once the train exits the tunnel, you are able to see again.')
+          print_slow('You see that your beloved dog is no longer next to you.')
+          print_slow('\nAs you start looking around, you hear a voice through the intercom.')
+          print_slow(
               '"hahaha! You want your dog back? You\'ll have to reach the front of the train first!"'
           )
-          print('\n"Good luck!"')
+          print_slower('\n"Good luck!"')
           sleep(5)
           clear()
 
@@ -52,192 +52,192 @@ while True:
       print()
       if current_room == 'opening room':
           clear()
-          print('You get up from your current seat and look around.')
-          print(
+          print_slow('You get up from your current seat and look around.')
+          print_slow(
               'There\'s a bunch of luggage thrown about, no one seems to be here...'
           )
-          print('You see a door, the path seems straight forward.')
-          print('Will you go towards the door? (a/b)')
-          print('a. Yes')
-          print('b. No')
+          print_slow('You see a door, the path seems straight forward.')
+          print_slow('Will you go towards the door? (a/b)')
+          print_slow('a. Yes')
+          print_slow('b. No')
           door = input('Please select from the options above: ')
           if door == 'a':
               clear()
-              print('You go to the door and open it, taking you to the next room.')
+              print_slow('You go to the door and open it, taking you to the next room.')
           elif door == 'b':
               clear()
-              print('You decide not to go towards the door.')
-              print('...')
-              print(
+              print_slow('You decide not to go towards the door.')
+              print_slow('...')
+              print_slow(
                   'There is nothing else to do, so you decide to go to the door anyway.'
                 )
-              print(
+              print_slow(
                   'You go to the door and open it, taking you to the next room.')
 
 
       elif current_room == 'empty room':
-          print('The door locks behind you.')
-          print('You are in a small empty room.')
-          print('There, stands a button in the middle...')
-          print('Do you press it?')
-          print('a. Yes')
-          print('b. No')
+          print_slow('The door locks behind you.')
+          print_slow('You are in a small empty room.')
+          print_slow('There, stands a button in the middle...')
+          print_slow('Do you press it?')
+          print_slow('a. Yes')
+          print_slow('b. No')
           choice = input('Please select from the options above: ')
           if choice == 'a':
               clear()
-              print("Congratulations a new door has been opened!")
+              print_slow("Congratulations a new door has been opened!")
           elif choice == 'b':
               clear()
-              print("You're stuck forever")
-              print("Game Over.")
+              print_slow("You're stuck forever")
+              print_slower("Game Over.")
               sleep(3)
               break
 
       elif current_room == 'coal room':
-          print('You entered the coal room.')
-          print('The room is extremely dark.')
-          print('Theres a torch near the enterence...')
-          print('Will you light it?')
-          print('a. Yes')
-          print('b. No')
+          print_slow('You entered the coal room.')
+          print_slow('The room is extremely dark.')
+          print_slow('Theres a torch near the enterence...')
+          print_slow('Will you light it?')
+          print_slow('a. Yes')
+          print_slow('b. No')
           choice = input('Please select from the options above: ')
           if choice == 'a':
               clear()
-              print('\nYou are engulfed in flames and have died.')
-              print('Game Over.')
+              print_slow('\nYou are engulfed in flames and have died.')
+              print_slower('Game Over.')
               sleep(3)
               break
           elif choice == 'b':
               clear()
-              print('\nThe room continues to be extremely dark')
+              print_slow('\nThe room continues to be extremely dark')
 
-          print('\nYou hear your dog barking from the North.')
-          print(
+          print_slow('\nYou hear your dog barking from the North.')
+          print_slow(
               'You realize you can feel your way towards the exit of the room.')
-          print('Which direction will you start feeling your way towards?')
-          print('a. North')
-          print('b. East')
-          print('c. South')
-          print('d. West')
+          print_slow('Which direction will you start feeling your way towards?')
+          print_slow('a. North')
+          print_slow('b. East')
+          print_slow('c. South')
+          print_slow('d. West')
           direction = input('Please select from the options above: ')
 
           if direction == 'a':
               clear()
-              print(
+              print_slow(
                   '\nYou start inching your way to the North, eventually reaching a door.'
               )
-              print('You open the door, reaching the next room')
+              print_slow('You open the door, reaching the next room')
           elif direction == 'b':
               clear()
-              print('\nYou start inching your way East.')
-              print(
+              print_slow('\nYou start inching your way East.')
+              print_slow(
                   'While moving, you notice the floorboards under you have gotten loose.'
               )
-              print('Suddenly, a board from under you has given way.')
-              print('You fall off the train while it is moving at high speed.')
-              print('You die instantly.')
-              print('Game Over.')
+              print_slow('Suddenly, a board from under you has given way.')
+              print_slow('You fall off the train while it is moving at high speed.')
+              print_slow('You die instantly.')
+              print_slower('Game Over.')
               sleep(3)
               break
           elif direction == 'c':
               clear()
-              print('\nYou start inching your way South.')
-              print('You eventually start hearing bats.')
-              print('You are swarmed by bats.')
-              print('You start panicking and lose your footing.')
-              print('You fall and break your neck.')
-              print('You have died.')
-              print('Game Over.')
+              print_slow('\nYou start inching your way South.')
+              print_slow('You eventually start hearing bats.')
+              print_slow('You are swarmed by bats.')
+              print_slow('You start panicking and lose your footing.')
+              print_slow('You fall and break your neck.')
+              print_slow('You have died.')
+              print_slower('Game Over.')
               sleep(3)
               break
           elif direction == 'd':
               clear()
-              print('\nYou start inching your way West.')
-              print(
+              print_slow('\nYou start inching your way West.')
+              print_slow(
                   'As you reach out to move your hand to the next place on the wall, you feel something cut you.'
               )
-              print(
+              print_slow(
                   'You think it is nothing as you look at your hand and just see a normal looking cut.'
               )
-              print(
+              print_slow(
                   'However, you start noticing your vision start going a little crazy.'
               )
-              print(
+              print_slow(
                   'The room is filled with bright colors and you start feeling dizzy.'
               )
-              print('You lose your balance and fall.')
-              print('You start foaming from the mouth.')
-              print(
+              print_slow('You lose your balance and fall.')
+              print_slow('You start foaming from the mouth.')
+              print_slow(
                   'You hear echoes of your dog barking as you close your eyes for the last time.'
               )
-              print('You have died.')
-              print('Game Over.')
+              print_slow('You have died.')
+              print_slower('Game Over.')
               sleep(3)
               break
 
       elif current_room == 'fire room':
-          print('You enter the room blinded by light.')
-          print('There is fire everywhere.')
-          print('There\'s fire blocking the way to the door.')
-          print('What will you do?')
-          print('a. Walk through the fire.')
-          print('b. Throw your jacket on top of the fire to suffocate it.')
-          print('c. Use your water bottle to pour water on the fire.')
+          print_slow('You enter the room blinded by light.')
+          print_slow('There is fire everywhere.')
+          print_slow('There\'s fire blocking the way to the door.')
+          print_slow('What will you do?')
+          print_slow('a. Walk through the fire.')
+          print_slow('b. Throw your jacket on top of the fire to suffocate it.')
+          print_slow('c. Use your water bottle to pour water on the fire.')
           choice = input('\nPlease select from the options above: ')
           if choice == 'a':
             clear()
-            print('\nlol you died.')
-            print('Game Over.')
+            print_slow('\nlol you died.')
+            print_slower('Game Over.')
             sleep(3)
             break
           elif choice == 'b':
             clear()
-            print('\nYou throw your jacket on top of the fire.')
-            print('The fire dies out from lack of oxygen.')
-            print('The way is now clear, you make your way to the next room.')
+            print_slow('\nYou throw your jacket on top of the fire.')
+            print_slow('The fire dies out from lack of oxygen.')
+            print_slow('The way is now clear, you make your way to the next room.')
           elif choice == 'c':
             clear()
-            print('\nYou throw water on the fire.')
-            print('Unfortunately it was an electrical fire.')
-            print('The electricity travels up the water, shocking you.')
-            print('You feel your heart give out from all the electricity.')
-            print('You are dead.')
-            print('Game Over.')
+            print_slow('\nYou throw water on the fire.')
+            print_slow('Unfortunately it was an electrical fire.')
+            print_slow('The electricity travels up the water, shocking you.')
+            print_slow('You feel your heart give out from all the electricity.')
+            print_slow('You are dead.')
+            print_slower('Game Over.')
             sleep(3)
             break
 
       elif current_room == 'boss room':
-          print("Various doors surround you...")
-          print('the sound of dogs barking are behind each door.')
-          print('Choose correctly which door to approach.')
-          print('Choose carfully...')
-          print('a. Door #1')
-          print('b. Door #2')
-          print('c. Door #3')
+          print_slow("Various doors surround you...")
+          print_slow('the sound of dogs barking are behind each door.')
+          print_slow('Choose correctly which door to approach.')
+          print_slow('Choose carfully...')
+          print_slow('a. Door #1')
+          print_slow('b. Door #2')
+          print_slow('c. Door #3')
           choice = input('Please select from the options above: ')
           if choice == 'a':
               clear()
-              print('Snakes begin to surround you.')
-              print("The snakes dig their fangs into you and you've died")
-              print('Game over.')
+              print_slow('Snakes begin to surround you.')
+              print_slow("The snakes dig their fangs into you and you've died")
+              print_slower('Game over.')
               sleep(3)
               break
           elif choice == 'b':
               clear()
-              print('You enter a room, The Conductor is sleeping...')
-              print('You quietly walk toward the exit..')
-              print('The door slings open and you escape')
+              print_slow('You enter a room, The Conductor is sleeping...')
+              print_slow('You quietly walk toward the exit..')
+              print_slow('The door slings open and you escape')
           elif choice == 'c':
               clear()
-              print('Gas rushes through the door. \n The air becomes thick you lose concious')
-              print('Game over.')
+              print_slow('Gas rushes through the door. \n The air becomes thick you lose concious')
+              print_slower('Game over.')
               sleep(3)
               break
 
       elif current_room == 'victory room':
-          print('\nYou have stepped out of the train and stepped into a meadow.')
-          print('bark... bark BARK!')
-          print("\nCongradulations, you've found your dog!")
+          print_slow('\nYou have stepped out of the train and stepped into a meadow.')
+          print_slow('bark... bark BARK!')
+          print_slow("\nCongradulations, you've found your dog!")
           win = True
           break
       # get user input
@@ -277,7 +277,7 @@ while True:
   
   
   if win:
-    print("\nWould you like to:\na. Play from beggining\nor\nb. End Game")
+    print_slow("\nWould you like to:\na. Play from beggining\nor\nb. End Game")
     again = input()
     if again == 'a':
       clear()
@@ -285,7 +285,7 @@ while True:
       continue
     elif again == 'b':
       clear()
-      print('\nThanks for Playing!')
+      print_slower('\nThanks for Playing!')
       print("\nFinal for CSCI-1101-95L-Fall2020")
       print("\nby:")
       print("Henry Olvera\nAlan Lopez\nTyler Landgraf\nEduardo Cruz\nAlyssa Perez")
@@ -297,7 +297,7 @@ while True:
       if again == "y":
         continue
       elif again == "n":
-        print("\nWould you like to:\na. Play from beggining\nor\nb. End Game")
+        print_slow("\nWould you like to:\na. Play from beggining\nor\nb. End Game")
         again = input()
         if again == 'a':
           clear()
@@ -305,12 +305,12 @@ while True:
           continue
         elif again == 'b':
             clear()
-            print('Thanks for playing!')
+            print_slower('Thanks for playing!')
             print("\nFinal for CSCI-1101-95L-Fall2020")
             print("\nby:")
             print("Henry Olvera\nAlan Lopez\nTyler Landgraf\nEduardo Cruz\nAlyssa Perez")
             break
     except:
-      print("Error... quitting game")
+      print_slow("Error... quitting game")
   
 
