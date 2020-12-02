@@ -43,7 +43,7 @@ while True:
           print_slow(
               '"hahaha! You want your dog back? You\'ll have to reach the front of the train first!"'
           )
-          print_slower('\n"Good luck!"')
+          print_slower('\n"Good luck, '+name+ '!"')
           sleep(5)
           clear()
 
@@ -88,7 +88,7 @@ while True:
               print_slow("Congratulations a new door has been opened!")
           elif choice == 'b':
               clear()
-              print_slow("You're stuck forever")
+              print_slow("You're stuck forever "+name+ ".")
               print_slower("Game Over.")
               sleep(3)
               break
@@ -103,7 +103,7 @@ while True:
           choice = input('Please select from the options above: ')
           if choice == 'a':
               clear()
-              print_slow('\nYou are engulfed in flames and have died.')
+              print_slow('\n'+name+ '... You are engulfed in flames and have died.')
               print_slower('Game Over.')
               sleep(3)
               break
@@ -136,7 +136,7 @@ while True:
               print_slow('Suddenly, a board from under you has given way.')
               print_slow('You fall off the train while it is moving at high speed.')
               print_slow('You die instantly.')
-              print_slower('Game Over.')
+              print_slower('Game Over, '+name+ '.')
               sleep(3)
               break
           elif direction == 'c':
@@ -147,8 +147,8 @@ while True:
               print_slow('You start panicking and lose your footing.')
               print_slow('You fall and break your neck.')
               print_slow('You have died.')
-              print_slower('Game Over.')
-              sleep(3)
+              print_slower('Game Over, '+name+ '.')
+              sleep(5)
               break
           elif direction == 'd':
               clear()
@@ -170,9 +170,9 @@ while True:
               print_slow(
                   'You hear echoes of your dog barking as you close your eyes for the last time.'
               )
-              print_slow('You have died.')
+              print_slow(name +' died.')
               print_slower('Game Over.')
-              sleep(3)
+              sleep(6)
               break
 
       elif current_room == 'fire room':
@@ -186,7 +186,7 @@ while True:
           choice = input('\nPlease select from the options above: ')
           if choice == 'a':
             clear()
-            print_slow('\nlol you died.')
+            print_slow('\nlol you died, '+name+ '.')
             print_slower('Game Over.')
             sleep(3)
             break
@@ -201,7 +201,7 @@ while True:
             print_slow('Unfortunately it was an electrical fire.')
             print_slow('The electricity travels up the water, shocking you.')
             print_slow('You feel your heart give out from all the electricity.')
-            print_slow('You are dead.')
+            print_slow('You are dead, '+name+ '.')
             print_slower('Game Over.')
             sleep(3)
             break
@@ -219,7 +219,7 @@ while True:
               clear()
               print_slow('Snakes begin to surround you.')
               print_slow("The snakes dig their fangs into you and you've died")
-              print_slower('Game over.')
+              print_slower('Game over, '+name+ '.')
               sleep(3)
               break
           elif choice == 'b':
@@ -230,7 +230,7 @@ while True:
           elif choice == 'c':
               clear()
               print_slow('Gas rushes through the door. \n The air becomes thick you lose concious')
-              print_slower('Game over.')
+              print_slower('Game over, '+name+ '.')
               sleep(3)
               break
 
@@ -285,7 +285,7 @@ while True:
       continue
     elif again == 'b':
       clear()
-      print_slower('\nThanks for Playing!')
+      print_slower('\nThanks for Playing, '+name+ '!')
       print("\nFinal for CSCI-1101-95L-Fall2020")
       print("\nby:")
       print("Henry Olvera\nAlan Lopez\nTyler Landgraf\nEduardo Cruz\nAlyssa Perez")
@@ -305,7 +305,7 @@ while True:
           continue
         elif again == 'b':
             clear()
-            print_slower('Thanks for playing!')
+            print_slower('Thanks for playing, '+name+ '!')
             print("\nFinal for CSCI-1101-95L-Fall2020")
             print("\nby:")
             print("Henry Olvera\nAlan Lopez\nTyler Landgraf\nEduardo Cruz\nAlyssa Perez")
