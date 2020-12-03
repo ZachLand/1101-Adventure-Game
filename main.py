@@ -120,7 +120,7 @@ def getChoiceYN():
     return choice
 
 # game loop
-current_room = 'victory room'
+current_room = 'title room'
   # check point loop
 while True:
   while True:
