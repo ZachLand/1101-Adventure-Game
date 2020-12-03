@@ -120,7 +120,7 @@ def getChoiceYN():
     return choice
 
 # game loop
-current_room = 'title room'
+current_room = 'victory room'
   # check point loop
 while True:
   while True:
@@ -195,7 +195,7 @@ while True:
       elif current_room == 'coal room':
           print_slow('You entered the coal room.')
           print_slow('The room is extremely dark.')
-          print_slow('Theres a torch near the enterence...')
+          print_slow('There\'s a torch near the entrance...')
           print_slow('Will you light it?')
           print_slow('a. Yes')
           print_slow('b. No')
@@ -312,7 +312,7 @@ while True:
           print_slow("Various doors surround you...")
           print_slow('the sound of dogs barking are behind each door.')
           print_slow('Choose correctly which door to approach.')
-          print_slow('Choose carfully...')
+          print_slow('Choose carefully...')
           print_slow('a. Door #1')
           print_slow('b. Door #2')
           print_slow('c. Door #3')
@@ -332,7 +332,7 @@ while True:
               print_slow('The door slings open and you escape')
           elif choice == 'c':
               clear()
-              print_slow('Gas rushes through the door. \n The air becomes thick you lose concious')
+              print_slow('Gas rushes through the door. \n The air becomes thick you lose conscious')
               print_slower('Game over, '+name+ '.')
               sleep(3)
               break
@@ -340,7 +340,11 @@ while True:
       elif current_room == 'victory room':
           print_slow('\nYou have stepped out of the train and stepped into a meadow.')
           print_slow('bark... bark BARK!')
-          print_slow("\nCongradulations, you've found your dog!")
+          print_slow("           __")
+          print_slow("      (___()'`;")
+          print_slow("      /,    /`")
+          print_slow("      \\\\\"--\\\\")
+          print_slow("\nCongratulations, you've found your dog!")
           win = True
           break
       # get user input
@@ -381,7 +385,7 @@ while True:
   
   
   if win:
-    print_slow("\nWould you like to:\na. Play from beggining\nor\nb. End Game")
+    print_slow("\nWould you like to:\na. Play from beginning\nor\nb. End Game")
     again = getChoiceAB()
     if again == 'a':
       clear()
@@ -403,7 +407,7 @@ while True:
         clear()
         continue
       elif again == "n":
-        print_slow("\nWould you like to:\na. Play from beggining\nor\nb. End Game")
+        print_slow("\nWould you like to:\na. Play from beginning\nor\nb. End Game")
         again = getChoiceAB()
         if again == 'a':
           clear()
