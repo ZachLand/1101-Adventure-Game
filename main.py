@@ -165,7 +165,7 @@ while True:
           elif door == 'b':
               clear()
               print_slow('You decide not to go towards the door.')
-              print_slow('...')
+              print_slower('...')
               print_slow(
                   'There is nothing else to do, so you decide to go to the door anyway.'
                 )
@@ -396,7 +396,8 @@ while True:
       break
   else:
     clear()
-    again = input("\nWould you like to start over from the last room? (y/n): ")
+    print_slow("\nWould you like to start over from the last room? (y/n): ")
+    again = getChoiceYN()
     try:
       if again == "y":
         clear()
