@@ -10,17 +10,114 @@ def clear():
     else: 
         _ = system('clear') 
 
+# function for printing slow for more game-like
 def print_slow(txt):
     for x in txt:                     # cycle through the text one character at a time
         print(x, end='', flush=True)  # print one character, no new line, flush buffer
         sleep(0.05)
     print() # go to new line
 
+# function for printing slower for more dramatic texts
 def print_slower(txt):
     for x in txt:                     # cycle through the text one character at a time
         print(x, end='', flush=True)  # print one character, no new line, flush buffer
         sleep(0.1)
     print() # go to new line
+
+# input validation for A/B selections
+def getChoiceAB():
+    while True:
+        while True:
+            try:
+                choice = str(input())
+                break
+            except:
+                print('ERROR: Please enter valid input option: ')
+        if choice.lower() == 'a':
+            choice = 'a'
+            break
+        elif choice.lower() == 'b':
+            choice = 'b'
+            break
+        else:
+            print('ERROR: Please enter valid input option: ')
+            continue
+    return choice
+
+# input validation for A/B/C selections
+def getChoiceABC():
+    while True:
+        while True:
+            try:
+                choice = str(input())
+                break
+            except:
+                print('ERROR: Please enter valid input option: ')
+        if choice.lower() == 'a':
+            choice = 'a'
+            break
+        elif choice.lower() == 'b':
+            choice = 'b'
+            break
+        elif choice.lower() == 'c':
+            choice = 'c'
+            break
+        else:
+            print('ERROR: Please enter valid input option: ')
+            continue
+    return choice
+
+# input validation for A/B/C/D selections
+def getChoiceABCD():
+    while True:
+        while True:
+            try:
+                choice = str(input())
+                break
+            except:
+                print('ERROR: Please enter valid input option: ')
+        if choice.lower() == 'a':
+            choice = 'a'
+            break
+        elif choice.lower() == 'b':
+            choice = 'b'
+            break
+        elif choice.lower() == 'c':
+            choice = 'c'
+            break
+        elif choice.lower() == 'd':
+            choice = 'd'
+            break
+        else:
+            print('ERROR: Please enter valid input option: ')
+            continue
+    return choice
+
+# input validation for Y/N selections
+def getChoiceYN():
+    while True:
+        while True:
+            try:
+                choice = str(input())
+                break
+            except:
+                print('ERROR: Please enter valid input option: ')
+        if choice.lower() == 'y':
+            choice = 'y'
+            break
+        elif choice.lower() == 'yes':
+            choice = 'y'
+            break
+        elif choice.lower() == 'n':
+            choice = 'n'
+            break
+        elif choice.lower() == 'no':
+            choice = 'n'
+            break
+        else:
+            print('ERROR: Please enter valid input option: ')
+            continue
+    return choice
 
 # game loop
 current_room = 'title room'
@@ -44,8 +141,8 @@ while True:
               '"hahaha! You want your dog back? You\'ll have to reach the front of the train first!"'
           )
           print_slower('\n"Good luck, '+name+ '!"')
-          sleep(5)
-          clear()
+          sleep(5) #pauses screen for 5 seconds
+          clear() #clears screen
 
           current_room = 'opening room'
       # display room contents
@@ -60,7 +157,8 @@ while True:
           print_slow('Will you go towards the door? (a/b)')
           print_slow('a. Yes')
           print_slow('b. No')
-          door = input('Please select from the options above: ')
+          print_slow('Please select from the options above: ')
+          door = getChoiceAB()
           if door == 'a':
               clear()
               print_slow('You go to the door and open it, taking you to the next room.')
@@ -82,7 +180,8 @@ while True:
           print_slow('Do you press it?')
           print_slow('a. Yes')
           print_slow('b. No')
-          choice = input('Please select from the options above: ')
+          print_slow('Please select from the options above: ')
+          choice = getChoiceAB()
           if choice == 'a':
               clear()
               print_slow("Congratulations a new door has been opened!")
@@ -100,7 +199,8 @@ while True:
           print_slow('Will you light it?')
           print_slow('a. Yes')
           print_slow('b. No')
-          choice = input('Please select from the options above: ')
+          print_slow('Please select from the options above: ')
+          choice = getChoiceAB()
           if choice == 'a':
               clear()
               print_slow('\n'+name+ '... You are engulfed in flames and have died.')
@@ -119,7 +219,8 @@ while True:
           print_slow('b. East')
           print_slow('c. South')
           print_slow('d. West')
-          direction = input('Please select from the options above: ')
+          print_slow('Please select from the options above: ')
+          direction = getChoiceABCD()
 
           if direction == 'a':
               clear()
@@ -183,7 +284,8 @@ while True:
           print_slow('a. Walk through the fire.')
           print_slow('b. Throw your jacket on top of the fire to suffocate it.')
           print_slow('c. Use your water bottle to pour water on the fire.')
-          choice = input('\nPlease select from the options above: ')
+          print_slow('Please select from the options above: ')
+          choice = getChoiceABC()
           if choice == 'a':
             clear()
             print_slow('\nlol you died, '+name+ '.')
@@ -214,7 +316,8 @@ while True:
           print_slow('a. Door #1')
           print_slow('b. Door #2')
           print_slow('c. Door #3')
-          choice = input('Please select from the options above: ')
+          print_slow('Please select from the options above: ')
+          choice = getChoiceABC()
           if choice == 'a':
               clear()
               print_slow('Snakes begin to surround you.')
@@ -241,7 +344,8 @@ while True:
           win = True
           break
       # get user input
-      command = input('\nContinue? (yes/no): ').strip()
+      print_slow('\nContinue? (yes/no): ')
+      command = getChoiceYN()
       # movement
       if command.lower() in ('y', 'yes'):
           if current_room == 'title room':
@@ -278,7 +382,7 @@ while True:
   
   if win:
     print_slow("\nWould you like to:\na. Play from beggining\nor\nb. End Game")
-    again = input()
+    again = getChoiceAB()
     if again == 'a':
       clear()
       current_room = 'title room'
@@ -295,10 +399,11 @@ while True:
     again = input("\nWould you like to start over from the last room? (y/n): ")
     try:
       if again == "y":
+        clear()
         continue
       elif again == "n":
         print_slow("\nWould you like to:\na. Play from beggining\nor\nb. End Game")
-        again = input()
+        again = getChoiceAB()
         if again == 'a':
           clear()
           current_room = 'title room'
@@ -312,5 +417,3 @@ while True:
             break
     except:
       print_slow("Error... quitting game")
-  
-
